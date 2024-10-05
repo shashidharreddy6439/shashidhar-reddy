@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Developer Portfolio - Kandula Shashidhar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light mode background */
+            color: #333; /* Light mode text color */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+        header {
+            background: #000000; /* Black background */
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .box {
+            background: #e0e0e0; /* Light gray background for boxes */
+            padding: 20px;
+            margin: 10px 0; /* Adjusted margin for vertical stacking */
+            border-radius: 5px;
+            border: 1px solid #bdbdbd; /* Added border */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease; /* Scaling effect */
+        }
+        .box:hover {
+            transform: scale(1.02); /* Scale effect on hover */
+        }
+        h1, h2, h3 {
+            margin: 0;
+            font-weight: 700;
+            text-decoration: underline; /* Underline the headings */
+        }
+        .project {
+            border-left: 3px solid #0077cc;
+            padding-left: 10px;
+            margin-bottom: 15px;
+            width: 100%; /* Ensure full width */
+            text-align: left; /* Align project titles to the left */
+        }
+        .project h3 {
+            color: #0077cc;
+            margin-bottom: 5px;
+        }
+        .skills-list, .certifications-list {
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li, .certifications-list li {
+            margin-bottom: 5px;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            padding: 10px 0;
+            background-color: #000000; /* Black background */
+            color: white;
+            border-radius: 5px;
+        }
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text color */
+        }
+        .box.dark-mode {
+            background: #1e1e1e; /* Dark gray background for boxes */
+            border: 1px solid #333; /* Darker border */
+        }
+        header.dark-mode {
+            background: #1e1e1e; /* Dark header */
+        }
+        footer.dark-mode {
+            background-color: #1e1e1e; /* Dark footer */
+        }
+        .toggle-container {
+            position: fixed; /* Fixed position */
+            top: 20px; /* Adjust position */
+            right: 20px; /* Align to the right */
+            z-index: 1000; /* Ensure it is above other elements */
+        }
+        .toggle {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #0077cc; /* Color of the toggle when checked */
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px); /* Move the toggle to the right */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kandula Shashidhar</h1>
+    <p>SQL/MSBI Developer | <a href="mailto:kandulashashidhar55@gmail.com" style="color: white; text-decoration: none;">kandulashashidhar55@gmail.com</a> | <a href="https://www.linkedin.com/in/shashidhar-reddy-kandula-508676130" title="Go to Profile" style="color: white; text-decoration: none;">LinkedIn</a></p>
+</header>
+
+<div class="toggle-container">
+    <label class="toggle">
+        <input type="checkbox" id="themeSwitcher">
+        <span class="slider"></span>
+    </label>
+</div>
+
+<div class="box">
+    <h2>About Me</h2>
+    <p>Passionate SQL/MSBI Developer with over 3 years of experience in database management, ETL processes, and delivering insightful reports using Microsoft BI tools (SSIS, SSRS, SSAS). Skilled in Power BI, Azure Data Factory, and performance tuning, I aim to enhance organizational decision-making through data-driven solutions.</p>
+</div>
+
+<div class="box">
+    <h2>Technical Skills</h2>
+    <ul class="skills-list">
+        <li>Languages: T-SQL, SQL, Python</li>
+        <li>Databases: MS SQL Server (2012 - 2022), Azure</li>
+        <li>BI Tools: SSIS, SSRS, SSAS, Power BI</li>
+        <li>Other Skills: ETL, Data Modeling, Performance Tuning, Azure Data Factory</li>
+        <li>Source Control: Git, Team City, Octopus</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Professional Experience</h2>
+    <p><strong>ETL Developer | Xyenta Solutions India PVT Ltd | Dec 2021 - Present</strong></p>
+    <p>Key responsibilities include developing and optimizing ETL processes, managing databases, and generating data reports.</p>
+    <p><strong>Achievements:</strong> Led the team to improve SSIS execution times by 30% in the Finance Data Mart project.</p>
+
+    <h3>Projects</h3>
+    <div class="project">
+        <h3>Finance Data Mart (FDM)</h3>
+        <p>Led the development of a centralized financial data repository for Beazley, automating manual finance processes and improving execution times using SSIS and SQL Server.</p>
+        <p><strong>Technologies Used:</strong> SQL Server, SSIS, T-SQL</p>
+    </div>
+    <div class="project">
+        <h3>Investment Reporting (IR)</h3>
+        <p>Implemented ETL solutions to automate investment reporting, ensuring data accuracy and improving efficiency by 30%.</p>
+        <p><strong>Technologies Used:</strong> SQL Server, SSIS, Power BI</p>
+    </div>
+</div>
+
+<div class="box">
+    <h2>Certifications</h2>
+    <ul class="certifications-list">
+        <li>HackerRank SQL Certified</li>
+        <li>Udemy: Advanced SQL Server Course</li>
+        <li>Microsoft Certified: Azure Data Fundamentals</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Education</h2>
+    <p><strong>MCA | University College of Engineering, Osmania University | Hyderabad, India | 2020</strong></p>
+    <p>Relevant coursework: Database Management, Data Analysis, ETL Development</p>
+</div>
+
+<div class="box">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:kandulashashidhar55@gmail.com">kandulashashidhar55@gmail.com</a></p>
+    <p><strong>Phone:</strong> +91 9963226439</p>
+    <p>If you’d like to discuss how I can contribute to your business, feel free to reach out!</p>
+</div>
+
+<div class="box">
+    <h2>Projects Overview</h2>
+    <p>Throughout my career, I have been involved in various projects that demonstrate my skills and contributions in the field of data management and business intelligence.</p>
+    <div class="project">
+        <h3>Customer Data Management</h3>
+        <p>Worked on a project for customer data management, where I optimized the database structure and implemented ETL processes to ensure data accuracy and consistency.</p>
+        <p><strong>Technologies Used:</strong> SQL Server, T-SQL</p>
+    </div>
+    <div class="project">
+        <h3>Data Visualization Dashboard</h3>
+        <p>Developed a data visualization dashboard using Power BI to provide real-time insights into sales performance, resulting in improved decision-making for management.</p>
+        <p><strong>Technologies Used:</strong> Power BI, SQL Server</p>
+    </div>
+</div>
+
+<footer>
+    © 2024 Kandula Shashidhar | SQL/MSBI Developer
+</footer>
+
+<script>
+    const themeSwitcher = document.getElementById('themeSwitcher');
+    const body = document.body;
+
+    themeSwitcher.addEventListener('change', () => {
+        body.classList.toggle('dark-mode');
+        document.querySelectorAll('.box').forEach(box => {
+            box.classList.toggle('dark-mode');
+        });
+        header.classList.toggle('dark-mode');
+        footer.classList.toggle('dark-mode');
+    });
+</script>
+
+</body>
+</html>
